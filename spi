@@ -9,7 +9,7 @@ vsysarch=$(getconf LONG_BIT) # System architecture
 # Function for iptables rules (CentOS 7, Debian, Ubuntu, Fedora)
 firew2 ()	{
 	# Opening default Squid port 3128 for clients to connect
-	iptables -I INPUT -p tcp --dport 4400 -j ACCEPT
+	iptables -I INPUT -p tcp --dport 3128 4400 6600 9090 -j ACCEPT
 	# Saving firewall rules
 	iptables-save
 }
