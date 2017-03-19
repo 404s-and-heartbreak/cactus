@@ -77,38 +77,12 @@ ubt ()	{
 # Default function with information
 dinfo ()	{
 	echo "Squid Proxy Installer $vspiversion Build $vspibuild"
-	echo "You are using builds from the $vbranch branch"
-	echo ""
-	echo "Usage: bash spi <option>"
-	echo "Example (Debian 8): bash spi -jessie"
-	echo ""
-	echo "Options:"
-	echo "-rhel5   -- RHEL 5 Linux distributions"
-	echo "-rhel6   -- RHEL 6 Linux distributions"
-	echo "-rhel7   -- RHEL 7 Linux distributions"
-	echo "-debian  -- Debian Squeeze 6 & Wheezy 7"
-	echo "-jessie  -- Debian Jessie 8"
-	echo "-ubuntu  -- Ubuntu"
-	echo "-fedora  -- Fedora"
-	echo ""
-	echo "How to add more users:"
-	echo "https://github.com/hidden-refuge/spi/wiki/User-management"
-	echo ""
-	echo "How to blacklist domains:"
-	echo "https://github.com/hidden-refuge/spi/wiki/Domain-blacklist"
-	echo ""
-	echo ""
-	echo "(C) 2014 - 2017 by Hidden Refuge"
-	echo "GitHub Repo: https://github.com/hidden-refuge/spi"
-	echo "SPI Wiki: https://github.com/hidden-refuge/spi/wiki"
+	echo "-debian  -- Debian Wheezy 7"
+	
 }
 
 # Checking $1 and running corresponding function
 case $1 in
-	'-rhel5') # If option "-rhel5" run function rhel5
-		rhel5;; # RHEL 5 Linux distributions such as Red Hat 5, CentOS 5 and et cetera
-	'-rhel6') # If option "-rhel6" run function rhel6
-		rhel6;; # RHEL 6 Linux distributions such as Red Hat 6, CentOS 6 and et cetera
 	'-rhel7') # If option "-rhel7" run function rhel7
 		rhel7;;	# RHEL 7 Linux distributions such as Red Hat 7, CentOS 7 and et cetera
 	'-debian') # If option "-debian" run fuction deb
