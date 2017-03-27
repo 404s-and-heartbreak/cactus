@@ -10,7 +10,7 @@ firew2 ()	{
 deb ()	{
 	apt-get update
 	apt-get install apache2-utils squid3 -y
-	read -e -p "Create your desired username, a 4 digit number is always a good choice: " usrn
+	read -e -p "let's give this proxy a username:" usrn
 	htpasswd -c /etc/squid3/passwd $usrn
 	wget -O /etc/squid3/squid.conf https://raw.githubusercontent.com/404s-and-heartbreak/spi/master/spi-debian.conf --no-check-certificate
 	touch /etc/squid3/blacklist.acl
@@ -18,7 +18,7 @@ deb ()	{
 	firew2
 }
 dinfo ()	{
-	echo "Squid Proxy Installer $vspiversion Build $vspibuild"
+	echo "Proxy Installer $vspiversion Build $vspibuild"
 	echo "So glad to see you doing this yourself"
 	echo "This will set things up for you, all you need to do is set a Username and Password when prompted" 
 }
