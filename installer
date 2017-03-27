@@ -10,8 +10,8 @@ firew2 ()	{
 deb ()	{
 	apt-get update
 	apt-get install apache2-utils squid3 -y
-	read -e -p "Create your desired username, a 4 digit number is always a good choice: " 1388
-	htpasswd -c /etc/squid3/passwd/1252 $usrn
+	read -e -p "Create your desired username, a 4 digit number is always a good choice: " usrn
+	htpasswd -c /etc/squid3/passwd $usrn
 	wget -O /etc/squid3/squid.conf https://raw.githubusercontent.com/404s-and-heartbreak/spi/master/spi-debian.conf --no-check-certificate
 	touch /etc/squid3/blacklist.acl
 	service squid3 restart && update-rc.d squid3 defaults
