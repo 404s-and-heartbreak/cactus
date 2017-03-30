@@ -9,6 +9,7 @@ firew2 ()	{
 }
 deb ()	{
 	apt-get update
+	apt-get install curl 
 	apt-get install apache2-utils squid3 -y
 	read -e -p "let's give this proxy a username:" usrn
 	htpasswd -c /etc/squid3/passwd $usrn
