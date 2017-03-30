@@ -12,7 +12,7 @@ deb ()	{
 	apt-get install apache2-utils squid3 -y
 	read -e -p "let's give this proxy a username:" usrn
 	htpasswd -c /etc/squid3/passwd $usrn
-	wget -O /etc/squid3/squid.conf https://raw.githubusercontent.com/404s-and-heartbreak/spi/master/spi-debian.conf --no-check-certificate
+	wget -O /etc/squid3/squid.conf https://raw.githubusercontent.com/404s-and-heartbreak/cactus/master/installer-debian.conf --no-check-certificate
 	touch /etc/squid3/blacklist.acl
 	service squid3 restart && update-rc.d squid3 defaults
 	firew2
